@@ -1,0 +1,52 @@
+GUIDAGE:
+V dénomination explicite
+V contrôles groupés fonction / menus
+X indicateurs sur le tutorat (nb etu, mecs en attente)
+X feedback dragndrop
+V bonne lisibilités des infos
+
+CHARGE DE TRAVAIL:
+X ctrl / shift + clic pour affectation forcée
+V nombre minimal d'actions pour atteindre but (ajout, suppression, affectation, coefs, ...)
+
+CONTROLE EXPLICITE:
+~ rien ne se passe si on ne demande rien (CORRIGER le bug double selction)
+
+ADAPTABILITE:
+V raccourcis claviers pour actions fréquentes, dragndrop
+X interface non personnalisable (DARKMODE compliqué??)
+
+GESTION DES ERREURS:
+V dialogue confirmation ajout, suppression affectation
+V controles desactivés quand inutilisables
+X pas de undo
+~ rollback lasts coefs et reaffecter
+
+HOMOGENEITE COHERENCE:
+V les memes actions portent le meme nom à tout endroit
+~ alignement des controles
+
+SIGNIFIANCE:
+V le nom indique l'action, un tooltip est souvent disponible
+V les groupes sont nommés explicitement
+
+COMPATIBILITE:
+V mise en page non révolutionnaire
+V diversité des méthodes pour une même action
+
+
+TODO:
+
+> SAVE OLD COEFS
+
+> disable les menus
+> force affect disable buttons liste (tutor tutored)
+
+> Afficher touche des racxourcis (menu top, menu a gauche, et menu clic droit)
+
+
+
+GUIDAGE 
+INCITATION :
+    POPUP INPUT Label explicites pour la nature
+    

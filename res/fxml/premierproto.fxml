@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #091527;" BorderPane.alignment="CENTER_LEFT">
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+         <children>
+            <ComboBox prefWidth="150.0" promptText="Choisir une matière" />
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ComboBox maxHeight="25.0" maxWidth="71.0" minHeight="25.0" minWidth="25.0" prefHeight="25.0" prefWidth="71.0" />
+                  <Label text="Mr. Casiez" textFill="WHITE" />
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/placeholder%20drole%20xDDD.jpg" />
+                     </image></ImageView>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: e1f1ff;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="47.0" prefWidth="600.0">
+               <children>
+                  <Region prefHeight="200.0" prefWidth="200.0" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="126.0">
+                     <children>
+                        <Slider majorTickUnit="1.0" max="4.0" maxHeight="75.0" showTickLabels="true" />
+                        <Slider majorTickUnit="1.0" max="4.0" maxHeight="75.0" prefHeight="0.0" prefWidth="42.0" showTickLabels="true" />
+                        <Slider majorTickUnit="1.0" max="4.0" maxHeight="75.0" showTickLabels="true" />
+                     </children>
+                  </HBox>
+                  <ToolBar prefHeight="47.0" prefWidth="631.0" style="-fx-background-color: false;" styleClass="none" HBox.hgrow="ALWAYS">
+                    <items>
+                      <Button mnemonicParsing="false" text="↺" />
+                        <Button mnemonicParsing="false" text="🔀" />
+                        <Button mnemonicParsing="false" text="↓" />
+                        <Button mnemonicParsing="false" text="Affecter !" />
+                        <Region prefHeight="33.0" prefWidth="223.0" />
+                        <Button mnemonicParsing="false" text="‒" />
+                        <Button mnemonicParsing="false" text="+" />
+                    </items>
+                  </ToolBar>
+                  <Region prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="261.0" prefWidth="600.0">
+               <children>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <ListView prefHeight="200.0" prefWidth="200.0" />
+                  <Region maxWidth="100.0" prefHeight="200.0" prefWidth="200.0" />
+                  <ListView prefHeight="0.0" prefWidth="200.0" />
+                  <Region prefHeight="200.0" prefWidth="200.0" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

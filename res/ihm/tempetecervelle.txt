@@ -1,0 +1,28 @@
+login des profs
+création de comptes
+deux listes dragand drop pour association clic gauche: liset etudiants se reorganise
+deux listes dragand drop pour association clic droit: interdire affecation 
+infos de l'étudiant qui pop a l'écran (notes , tuteurs, ...)
+double cliquer pour doubler le tuteur
+bouton pour affecter + màj auto
+slider pour poids des coefs ; bouton reset coefs
+liste déroulante pour choisir la matière du tutorat
+affectation aléatoire (coefs randoms)
+ajouter des etudiants (fenetre ajout) bouton / dernier item des listes
+un trait lie les deux etudiants
+bouton filtrer par ordre alpha, niveau, moyenne...
+choix etu / enseignant
+bip boup a l'ajout d'étudiants a la liste
+bruit lors de l'affectation moteur grippé
+zoup a la reorganisation de la liste
+clic droit menu contextuel modifier supprimer
+bouton undo
+
+SEQUENCES
+
+enseignant s'identifie
+sa matière de tutorat s'affiche
+il fait ce qu'il veut TADAAAAA
+
+
+

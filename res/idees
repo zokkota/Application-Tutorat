@@ -1,0 +1,90 @@
+alors comment on fait : 
+- formule du poids d'un tuteur : 1/annee + 1/note
+- formule du poids d'un tutoré : note/20
+- si y'a le même nombre on fait juste une affectation normale entre les étudiants
+- on passe sur la liste des tuteurs et s'ils peuvent en prendre plusieurs (avec un attribue genre nombreDeTutoré) on multiplie l'étudiant
+  en divisant son "poids" pour éviter de lui foutre des gens de ouf!
+- s'il y a encore trop d'étudiants, on trie la liste et les derniers étudiants sont virés (liste d'attente pour moins de violence)
+  dernier étudiants = plus fort pour les tutorés, plus faible pour les tuteurs (ofc)
+- voilà.
+
+AU SECOURS BORDEL.
+
+à faire au jeudi 28/04 11h :)
+pas envie de le faire mtn je le fais chez moi avec mon clavier hihihihihihihiihhi (osef)
+
+ajouter dans affectation : paramètre doublon vrai ou faux
+-> si vrai alors des tuteurs seront split si nécessaire ✓
+-> si faux, dans tous les cas les tuteurs ne seront pas split et il y aura une liste d'attente si déséquilibre ✓
+
+mieux de tout mettre dans la classe affectation
+-> on passe en paramètre 2 listes et puis ça processe tout seul ✓
+-> faire en sorte que l'affectation soit faite directement avec des étudiants plutôt que leur nom ✓
+-> rajouter une couche d'abstraction quoi ✓
+
+modification de étudiants et classes dérivées
+-> ajouter une simpleToString pour avoir une représentation d'un étudiant mais juste un nom genre ✓
+-> commenter tout en mieux ✓
+-> autre chose que j'ai oublié ofc ✓
+
+ajouter une classe utilitaire pour la gestion de listes d'étudiants
+-> méthode statiques pour refactor ✓
+-> ne plus l"utiliser dans les classes de cas directement mais dans la classe affectation ✓
+-> quelques méthodes pour les cas genre transformer un tableau à double entrée en liste d'étudiants ✓
+
+pour affecter deux étudiants ensemble (2 propositions à tester les deux)
+-> forcer le poids de l'arête entre deux étudiants à 0 puis retirer 1 à chaque nouvelle affectation
+-> sinon construire manuellement la liste d'étudiants à affecter, les retirer de la liste et append la liste d'affectation résultante ✓
+-> lequel est le plus propre/opti, jsp :) peut être demander à Boneva jsp
+
+AUJOURD'HUI ON EST LE 02/05/2022 ET VOILA CE QU'IL FAUT FAIRE :
+-> changer la manière d'affecter des étudiants manuellement
+-> au lieu de créer des arêtes, on fait leur poids à 0
+-> pendingEdges ça déguage.
+-> ça va nous éviter de les retirer de la liste et c'est moins chiant
+
+-> refaire des exceptions bien parce que là c'est un peu le bordel
+
+-> niveau commentaire on est bien mais du coup refaire encore mieux parce que ça sera modifié.
+
+-> ajouter un moyen de pondérer les critères d'affectation.
+
+-> ajouter fonctionnalité pour éviter une affectation de plusieurs étudiants
+-> ça remet un peu en cause des trucs.
+-> nouvel attribut genre "noAssignment" pour empêcher une affectation (= on met un poids de malade)
+-> poids de malade = le coût au final c'est pas non plus un truc de ouf c'est osef même.
+-> au lieu de calculer l'affectation direct, faire des setters ou on pourra donner des maps
+   d'étudiants à affecter / à ne pas affecter et faire calculer l'affectation que quand on la demande (ie. getAssignment/getTextAssignment)
+-> ça va réduire l'interface publique mais bon who cares. quoi que non on aura des setters donc let's go!
+-> ça va prendre du temps mais pas envie de démarrer maintenant parce que j'ai pas de souris et ça va me saouler.
+
+-> ce qui en découle = modifier les construteurs pour qu'ils soient moins relous quoi :
+-> avec String[][] pour fonctionner avec données pour tester
+-> avec des listes de Tutored et de Tutor directement pour faciliter les tests
+-> l'attribut tutorSplit sera toujours là, mais true de base, et peut être modifier si on veut avant de réaliser l'affectation.
+
+-> écrire une seule classe de test avec des tests ( :) ) et tester les fonctionnalités supplémentaire si on en a (? jsp à voir)
+
+j'ai l'impression que cette fois c'est la bonne genre ça parait être le plus logique.
+si seulement j'avais pensé à l'implémenter comme ça dès le début :)
+
+-> RAJOUTER LA MOTIV :) (poids tuteur / motiv)
+A = *0.8
+B = *1
+C = *1.2
+
+-> RAJOUTER LES ABSENCES xDDDDDDDDDDDD
+
+05/05 c'est bientot la fin dernier ajustements: (j'ai envie de me suicider de ouf fr)
+
+-> déplacer le poids dans une méthode à implémenter getWeight(double averageWeighting, double levelWeighting)
+-> pour pouvoir foutre une pondération sur la moyenne et sur le niveau voilà
+-> ajouter soit dans le constructeur soit des setters osef
+
+commande de javadoc pour que j'arrête de l'oublier :
+javadoc -private -d "./javadoc" -sourcepath "./src" -subpackages graphs.rapport -classpath "./lib/*"
+
+-> mettre les forbidden assignments / forced assignments sans la même map
+Map<Arete<Student>, Boolean>, 1 = ils dont être affectés, 0 = ils ne doivent pas l'être.
+Avantage de réduire le nombre d'attributs ET AUSSI de pouvoir mettre plusieurs étudiants dans le truc
+Mais ça risque de compliquer un petit peu les méthodes mais pas tellement.

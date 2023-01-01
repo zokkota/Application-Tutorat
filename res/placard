@@ -1,0 +1,43 @@
+/**
+     * Instantiation of an assignment.
+     * 
+     * @param students          String list as follows : [name, number of students
+     *                          to take in charge, average, level]. Number of
+     *                          students to take in change is irrelevant for tutored
+     *                          students.
+     * 
+     * @throws IllegalArgumentException if the level of one of the students is not
+     *                                  between 1 and 3 included.
+     */
+    public Assignment(String[][] students) throws IllegalArgumentException {
+        this();
+
+        for (String[] strings : students) {
+            String name = strings[0];
+            String nbOfTutored = strings[1];
+            int number = 0;
+            Double average;
+            int level;
+
+            try { 
+                average = Double.parseDouble(strings[2]);
+                level = Integer.parseInt(strings[3]);
+            } catch (NumberFormatException e) {
+                System.err.println("Unable to parse values.");
+                throw e;
+            }
+
+            if (level == 1) {
+                this.TutoredStudents.add(new Tutored(name, average));
+            } else if (level == 2 || level == 3) {
+                try {
+                    number = Integer.parseInt(nbOfTutored);
+                } catch (NumberFormatException e) {
+                    System.err.println("Please enter an integer for the number of tutored students a tutor can take in charge.");
+                }
+                this.TutorStudents.add(new Tutor(name, average, level, number));
+            } else {
+                throw new IllegalArgumentException("Level of any students must be between 1 and 3 included.");
+            }
+        }
+    }

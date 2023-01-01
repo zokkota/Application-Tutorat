@@ -1,0 +1,22 @@
+{
+    "tutored": {
+        "average": {
+            "minAverage": "4",
+            "maxAverage": "13"
+        },
+        "absences": {
+            "minAbsences": "0",
+            "maxAbsences": "10"
+        }
+    },
+    "tutor": {
+        "average": {
+            "minAverage": "10",
+            "maxAverage": "20"
+        },
+        "absences": {
+            "minAbsences": "0",
+            "maxAbsences": "15"
+        }
+    }
+}
